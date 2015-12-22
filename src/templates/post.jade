@@ -1,17 +1,13 @@
-doctype html
-html(lang = "en")
-  head
-    title #{post.title}
-  body
+extends ./layout.jade
+block content
     section.post
-      .container.text-right
-        a(href="").text-faded view all
+      .container
         .row
           .col-lg-8.col-lg-offset-2.text-center
             h2.section-heading #{post.title}
             
-            hr.ligh
-              
+            hr.light
+            
             p.text-faded
               | #{post.description}
             .article
