@@ -5,10 +5,13 @@ var express = require('express'),
 
 var app = express();
 
+//this set the jade view template
+app.set('view engine', 'jade');
+app.set('views', __dirname +  '/templates');
 
-
+//this render index view to this route
 app.get('/', function(req, res){
-  res.send("<h1>I am in love with treehouse</h1>")
+  res.render('index');
 });
 
 app.get('/blog/:title?', function(req, res){
